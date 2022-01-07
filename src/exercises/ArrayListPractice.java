@@ -16,10 +16,10 @@ public class ArrayListPractice {
         return sum;
     }
 
-    public static void printFiveLetterWords(ArrayList<String> wordlist) {
+    public static void printWords(ArrayList<String> wordlist, int length) {
         System.out.print("Five letter words found in the list: ");
         for (String s : wordlist) {
-            if (s.length() == 5) {
+            if (s.length() == length) {
                 System.out.print(s + " ");
             }
         }
@@ -42,11 +42,11 @@ public class ArrayListPractice {
         System.out.println(Arrays.toString(myArrList.toArray()));
         System.out.println("The sum of the integers in the array is " + sumEvens(myArrList));
 
-        printFiveLetterWords(myWordList);
+        printWords(myWordList, 5);
 
         String[] myStrArr = myStr.split(" ");
         List<String> largerWordList = Arrays.asList(myStrArr);
         ArrayList<String> largerWordList2 = new ArrayList<>(largerWordList);
-        printFiveLetterWords(largerWordList2);
+        printWords(largerWordList2, 5);
     }
 }

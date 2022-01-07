@@ -9,7 +9,9 @@ public class ArrayListPractice {
     public static int sumEvens(ArrayList<Integer> list) {
         int sum = 0;
         for (Integer integer : list) {
-            sum += integer;
+            if(integer % 2 == 0) {
+                sum += integer;
+            }
         }
         return sum;
     }

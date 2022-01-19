@@ -30,9 +30,15 @@ public class Student {
 
 
      //TODO: Uncomment and complete the getGradeLevel method here:
-//    public String getGradeLevel() {
-//        // Determine the grade level of the student based on numberOfCredits
-//    }
+    public String getGradeLevel() {
+        if(numberOfCredits < 30)
+            return "Freshmen";
+        if(numberOfCredits < 60)
+            return "Sophomore";
+        if(numberOfCredits < 90)
+            return "Junior";
+        return "Senior";
+    }
 
     // TODO: Complete the addGrade method.
     public void addGrade(int courseCredits, double grade) {

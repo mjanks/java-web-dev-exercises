@@ -45,14 +45,23 @@ public class Student {
         gpa = currentTotalQualityScore / numberOfCredits;
     }
 
-    // TODO: Add your custom 'toString' method here. Make sure it returns a well-formatted String rather
-    //  than just the class fields.
     public String toString() {
         return name + " (Credits: " + numberOfCredits + ", GPA: " + gpa + ")";
     }
 
-    // TODO: Add your custom 'equals' method here. Consider which fields should match in order to call two
-    //  Student objects equal.
+    public boolean equals(Student student) {
+        if (student == this)
+            return true;
+
+        if(student.getClass() != getClass())
+            return false;
+
+        if(student == null)
+            return false;
+
+        Student theStudent = (Student) student;
+        return theStudent.getStudentId() == getStudentId();
+    }
 
     public String getName() {
         return name;

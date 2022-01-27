@@ -1,6 +1,6 @@
 package exercises.technology;
 
-public class Computer {
+public class Computer extends AbstractEntity {
     private int storageSpace;
     private String manufacturer;
     private String model;

@@ -21,10 +21,6 @@ public class Smartphone extends Computer {
         return numPhotos;
     }
 
-    public void setNumPhotos(int numPhotos) {
-        this.numPhotos = numPhotos;
-    }
-
     public int takePhoto() {
         numPhotos++;
         return numPhotos;

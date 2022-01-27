@@ -10,6 +10,7 @@ public class Computer extends AbstractEntity {
         storageSpace = storage;
         manufacturer = aManufacturer;
         model = aModel;
+        isOn = false;
     }
 
     public int getStorageSpace() {
@@ -34,6 +35,10 @@ public class Computer extends AbstractEntity {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public boolean isOn() {
+        return isOn;
     }
 
     public boolean power(boolean status) {

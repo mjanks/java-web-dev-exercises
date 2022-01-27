@@ -9,6 +9,22 @@ public class Smartphone extends Computer {
         cameraType = camera;
     }
 
+    public String getCameraType() {
+        return cameraType;
+    }
+
+    public void setCameraType(String cameraType) {
+        this.cameraType = cameraType;
+    }
+
+    public int getNumPhotos() {
+        return numPhotos;
+    }
+
+    public void setNumPhotos(int numPhotos) {
+        this.numPhotos = numPhotos;
+    }
+
     public int takePhoto() {
         numPhotos++;
         return numPhotos;

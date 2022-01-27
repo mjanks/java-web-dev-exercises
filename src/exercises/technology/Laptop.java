@@ -14,4 +14,11 @@ public class Laptop extends Computer {
         System.out.println("Storage: " + this.getStorageSpace());
         System.out.println("Number of inputs: " + this.numInputs);
     }
+
+    @Override
+    public int addStoarge(int amountToAdd) {
+        int newStorageSpace = getStorageSpace() + amountToAdd;
+        System.out.println("Called from Laptop class");
+        return newStorageSpace;
+    }
 }

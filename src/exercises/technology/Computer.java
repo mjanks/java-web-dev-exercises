@@ -48,6 +48,7 @@ public class Computer extends AbstractEntity {
 
     public int addStoarge(int amountToAdd) {
         storageSpace += amountToAdd;
+        System.out.println("Called from Computer class");
         return storageSpace;
     }
 }

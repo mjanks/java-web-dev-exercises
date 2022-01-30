@@ -10,15 +10,26 @@ public class Main {
         ArrayList<Cone> cones = menu.getCones();
 
         // Flavors before and after
-        System.out.println("Flavors before sort:");
+//        System.out.println("Flavors before sort:");
+//        for(Flavor flavor : flavors)
+//            System.out.println(flavor.getName());
+//
+//        flavors.sort(new FlavorComparator());
+//
+//        System.out.println("\nFlavors after sort:");
+//        for(Flavor flavor : flavors)
+//            System.out.println(flavor.getName());
+
+        // Allergens before and after
+        System.out.println("Flavor allergens before sort:");
         for(Flavor flavor : flavors)
-            System.out.println(flavor.getName());
+            System.out.println(flavor.getAllergens() + " (" + flavor.getAllergens().size() + ")");
 
         flavors.sort(new FlavorComparator());
 
-        System.out.println("\nFlavors after sort:");
+        System.out.println("\nFlavor allergens after sort:");
         for(Flavor flavor : flavors)
-            System.out.println(flavor.getName());
+            System.out.println(flavor.getAllergens() + " (" + flavor.getAllergens().size() + ")");
 
         // Cones before and after
         System.out.println("\nCones before sort:");

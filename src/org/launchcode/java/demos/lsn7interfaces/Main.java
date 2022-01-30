@@ -1,13 +1,13 @@
 package org.launchcode.java.demos.lsn7interfaces;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args){
         Case menu = new Case();
         ArrayList<Flavor> flavors = menu.getFlavors();
         ArrayList<Cone> cones = menu.getCones();
+        ArrayList<Topping> toppings = menu.getToppings();
 
         // Flavors before and after
 //        System.out.println("Flavors before sort:");
@@ -41,5 +41,16 @@ public class Main {
         System.out.println("\nCones after sort:");
         for(Cone cone : cones)
             System.out.println("$" + cone.getCost());
+
+        // Toppings before and after, cost highest to lowest
+        System.out.println("\nToppings before sort:");
+        for(Topping topping : toppings)
+            System.out.println("$" + topping.getCost());
+
+        toppings.sort(new ToppingComparator());
+
+        System.out.println("\nToppings after sort:");
+        for(Topping topping : toppings)
+            System.out.println("$" + topping.getCost());
     }
 }
